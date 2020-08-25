@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            border: solid blue;
+        }
+        .b{
+            background-color: greenyellow;
+        }
+    </style>
+    <script>
+    var d=document.querySelector("body");
+    function click(e){
+        d.classList.toggle("b")
+    }
+    d.onclick=click;
+    </script>
+    
+</body>
+</html>

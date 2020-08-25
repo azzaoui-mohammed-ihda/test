@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="c.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICE 03</title>
+    <script>
+    var d=document.querySelectorAll("div");
+       function init()
+       {
+        for (let i=1;i<d.length;i++)
+        {
+            function fun(e){
+                alert("le div"+i+"est clicke");
+            }
+            d[i].onclick=fun;
+        }
+       }
+    </script>
+</head>
+<body >
+    <div  onload="init()"></div>
+        <div class="s">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html onclick="alert('Propagation dans l element html')">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event buddles</title>
+    <script type="text/javascript">
+    event.cancelBubble=true;
+    function init()
+    {
+        document.body.onclick=docBodEvent;
+        event.cancelBubble= true;
+    }
+    function docEvent()
+    {
+        alert("propagationdans l objet document");
+    }
+    function docBodEvent()
+    {
+        alert("la propagation se fait dans le BODY");
+    }
+    
+
+    </script>
+</head>
+<body onload="init()"> onload sert a executer le javascript apres le chargement de la page
+<h1>propagation des evenements </h1>
+<form onclick="alert('il se propage au formulaire');">
+<input type="button" name="main1" value="button  main1"
+ onclick="alert('levenement commence au button '+this.name)"
+ 
+ />
+</form>
+    
+</body>
+</html>

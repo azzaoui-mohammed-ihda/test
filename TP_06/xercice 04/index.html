@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="c.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORLOGE</title>
+</head>
+<script>
+    function refrech(){
+     var time= 1000; //refaichissement en une seconde;
+     setTimeout('AfficheHeure()',time) 
+    }
+function AfficheHeure()
+{
+    var date= new Date();
+    var H = date.getHours();
+    var M = date.getMinutes();
+    var S = date.getSeconds();
+    if (S<10){ S = "0"+ S }
+    var TIME = H + ":" + M + ":" + S;
+    document.getElementById("horloge").innerHTML=TIME;
+    var d=document.getElementById("horloge");
+        d.setAttribute("style","background-color : green;")
+    refrech();
+}
+
+</script>
+<body onload="AfficheHeure()">
+    
+    <div id="horloge"></div>
+</body>
+</html>
